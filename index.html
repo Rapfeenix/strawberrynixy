@@ -51,13 +51,13 @@
         .snowflake {
             position: fixed;
             top: -10px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* Putih bersih */
             border-radius: 50%;
-            opacity: 0.7;
             pointer-events: none;
-            animation: fall linear infinite;
-            z-index: -1; /* Di belakang kartu tapi di depan kastil */
-        }
+            animation: fall linear forwards;
+            z-index: 1; /* Di atas background, di bawah main-card */
+            }
+        
 
         @keyframes fall {
             to { transform: translateY(110vh); }

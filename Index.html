@@ -1,14 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Situs Saya di Vercel</title> 
+    <title>Showcase HTML Murni</title>
 </head>
 <body>
-    
-    <h1>Halo Dunia Vercel!</h1>
-    <p>Ini adalah website pertama saya yang akan di-deploy via GitHub dan Vercel.</p>
+
+    <header>
+        <h1>Selamat Datang di Portofolio Saya</h1>
+        <nav>
+            <p><b>Menu:</b> <a href="#profil">Profil</a> | <a href="#proyek">Proyek</a> | <a href="#kontak">Kontak</a></p>
+        </nav>
+    </header>
+
+    <hr>
+
+    <section id="profil">
+        <h2>Profil Singkat</h2>
+        <p>Saya adalah seorang <i>web developer</i> pemula yang sedang belajar menggunakan <b>Vercel</b> dan <b>GitHub</b>.</p>
+        <blockquote>
+            "Belajar koding itu seperti lari maraton, yang penting konsisten, bukan seberapa cepat kamu lari."
+        </blockquote>
+    </section>
+
+    <section id="proyek">
+        <h2>Proyek Saya</h2>
+        <details>
+            <summary><b>Klik untuk lihat daftar proyek</b></summary>
+            <ul>
+                <li>Website Landing Page Sederhana</li>
+                <li>Kalkulator (Coming Soon)</li>
+                <li>Web Link Bio</li>
+            </ul>
+        </details>
+    </section>
+
+    <section id="hobi">
+        <h2>Hobi & Skill</h2>
+        <table border="1">
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>Menengah</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Pemula</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <footer id="kontak">
+        <h3>Hubungi Saya</h3>
+        <form>
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama.."><br><br>
+            
+            <label for="pesan">Pesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="4" cols="30"></textarea><br><br>
+            
+            <button type="submit">Kirim Pesan</button>
+        </form>
+        <p>© 2025 StrawberryNixy</p>
+    </footer>
 
 </body>
 </html>

@@ -185,18 +185,39 @@
     </section>
 
     <hr>
-
-    <footer id="kontak">
+    
+     <footer id="kontak">
         <h3>Hubungi Saya</h3>
-        <form>
+        <form id="waForm">
             <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama..">
+            <input type="text" id="nama" placeholder="Masukkan nama kamu.." required>
             <br><br>
             <label for="pesan">Pesan:</label>
-            <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
+            <textarea id="pesan" rows="4" placeholder="Tulis pesanmu di sini..." required></textarea>
             <br>
-            <button type="submit">Kirim Pesan</button>
+            <button type="button" onclick="kirimKeWA()">Kirim ke WhatsApp</button>
         </form>
+
+        <script>
+            function kirimKeWA() {
+                const nomorWA = "6285174162576"; // Nomor kamu dalam format internasional
+                const nama = document.getElementById('nama').value;
+                const pesan = document.getElementById('pesan').value;
+
+                if (nama === "" || pesan === "") {
+                    alert("Harap isi nama dan pesan dulu ya!");
+                    return;
+                }
+
+                // Membuat format pesan
+                const text = `Halo, saya ${nama}. %0A%0A${pesan}`;
+                
+                // Membuka link WhatsApp di tab baru
+                const url = `https://wa.me/${nomorWA}?text=${text}`;
+                window.open(url, '_blank').focus();
+            }
+        </script>
+
         <p style="text-align: center; margin-top: 40px; color: rgba(255,255,255,0.5); font-size: 0.8rem;">
             © 2025 StrawberryNixy • Build with ❤️
         </p>

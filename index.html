@@ -3,53 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StrawberryNixy Portofolio</title>
+    <title>StrawberryNixy Portofolio | Dark Mode</title>
     <style>
-        /* Tambahan CSS untuk Background & Styling */
+        /* CSS UNTUK DARK MODE DENGAN GRADASI */
         body {
-            /* Gradasi Ungu ke Pink */
-            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            /* Gradasi Ungu ke Pink sedikit lebih gelap agar vibe dark-nya dapet */
+            background: linear-gradient(135deg, #4834d4 0%, #686de0 50%, #eb4d4b 100%);
             background-attachment: fixed;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #2d3436;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff; /* Teks Utama Putih */
             line-height: 1.6;
             margin: 0;
             padding: 20px;
         }
 
-        /* Container agar konten berada di tengah dan rapi */
+        /* Container dengan efek Glassmorphism (Gelap Transparan) */
         .main-card {
-            background: rgba(255, 255, 255, 0.8); /* Putih transparan */
+            background: rgba(15, 15, 15, 0.75); /* Hitam transparan */
+            backdrop-filter: blur(10px); /* Efek blur kaca */
+            -webkit-backdrop-filter: blur(10px);
             max-width: 800px;
-            margin: 0 auto;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Garis tepi tipis */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
-        header h1 { color: #6c5ce7; }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
+        header h1 { 
+            color: #ff9ff3; /* Warna Pink Cerah untuk Judul */
+            margin-top: 0;
         }
 
-        th, td { padding: 10px; text-align: left; }
-
-        button {
-            background-color: #6c5ce7;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
+        nav a {
+            color: #a29bfe;
+            text-decoration: none;
             font-weight: bold;
         }
 
-        button:hover { background-color: #a29bfe; }
+        nav a:hover {
+            color: #ff9ff3;
+            text-decoration: underline;
+        }
         
-        hr { border: 0; border-top: 1px solid #ddd; margin: 20px 0; }
+        blockquote {
+            border-left: 4px solid #ff9ff3;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.05);
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th, td { 
+            padding: 12px; 
+            text-align: left; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th { background: rgba(108, 92, 231, 0.3); color: #ff9ff3; }
+
+        /* Styling Form agar masuk tema Dark */
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ff9ff3;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        button {
+            background: linear-gradient(90deg, #6c5ce7, #ff9ff3);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+        
+        hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 30px 0; }
+
+        summary { cursor: pointer; color: #a29bfe; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -75,7 +133,7 @@
     <section id="proyek">
         <h2>Proyek Saya</h2>
         <details>
-            <summary><b>Klik untuk lihat daftar proyek</b></summary>
+            <summary>Klik untuk lihat daftar proyek</summary>
             <ul>
                 <li>Website Landing Page Sederhana</li>
                 <li>Kalkulator (Coming Soon)</li>
@@ -86,19 +144,23 @@
 
     <section id="hobi">
         <h2>Hobi & Skill</h2>
-        <table border="1">
-            <tr>
-                <th>Skill</th>
-                <th>Level</th>
-            </tr>
-            <tr>
-                <td>HTML</td>
-                <td>Menengah</td>
-            </tr>
-            <tr>
-                <td>CSS</td>
-                <td>Pemula</td>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Skill</th>
+                    <th>Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Menengah</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Pemula</td>
+                </tr>
+            </tbody>
         </table>
     </section>
 
@@ -107,15 +169,17 @@
     <footer id="kontak">
         <h3>Hubungi Saya</h3>
         <form>
-            <label for="nama">Nama:</label><br>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama.." style="width: 100%; padding: 8px; margin-top: 5px;"><br><br>
-            
-            <label for="pesan">Pesan:</label><br>
-            <textarea id="pesan" name="pesan" rows="4" style="width: 100%; padding: 8px; margin-top: 5px;"></textarea><br><br>
-            
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama..">
+            <br><br>
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
+            <br>
             <button type="submit">Kirim Pesan</button>
         </form>
-        <p style="text-align: center; margin-top: 30px;">© 2025 StrawberryNixy</p>
+        <p style="text-align: center; margin-top: 40px; color: rgba(255,255,255,0.5); font-size: 0.8rem;">
+            © 2025 StrawberryNixy • Build with ❤️
+        </p>
     </footer>
 </div>
 

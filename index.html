@@ -16,6 +16,15 @@
             margin: 0;
             padding: 20px;
         }
+        .profile-img {
+            width: 150px;       /* Ukuran lebar */
+            height: 150px;      /* Ukuran tinggi */
+            border-radius: 50%; /* Biar bulat sempurna */
+            object-fit: cover;  /* Biar foto nggak penyet/distorsi */
+            border: 4px solid #ff9ff3; /* Bingkai pink sesuai tema */
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
 
         /* Container dengan efek Glassmorphism (Gelap Transparan) */
         .main-card {
@@ -114,6 +123,9 @@
 
 <div class="main-card">
     <header>
+        <div style="text-align: center;">
+    <img src="profile.jpeg" alt="Foto Profil" class="profile-img">
+</div>
         <h1>Wazzup Fans</h1>
         <nav>
             <p><b>Menu:</b> <a href="#profil">Profil</a> | <a href="#proyek">Proyek</a> | <a href="#kontak">Kontak</a></p>
@@ -124,7 +136,7 @@
 
     <section id="profil">
         <h2>Profil Singkat</h2>
-        <p>Saya adalah seorang mahasiswa sasing ganteng yang skor complete paper pinya 90!  <b></b>  <b> </b>.</p>
+        <p>Saya adalah seorang mahasiswa sasing ganteng yang skor complete paper pinya 90!  <b></b>  <b> </b></p>
         <blockquote>
             " Aku suka cewe ND UwU ❤️❤️❤️"
         </blockquote>

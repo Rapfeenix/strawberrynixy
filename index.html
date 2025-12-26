@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Showcase HTML Murni</title>
+    <title>StrawberryNixy Portofolio</title>
+    <style>
+        /* Tambahan CSS untuk Background & Styling */
+        body {
+            /* Gradasi Ungu ke Pink */
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3436;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container agar konten berada di tengah dan rapi */
+        .main-card {
+            background: rgba(255, 255, 255, 0.8); /* Putih transparan */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        header h1 { color: #6c5ce7; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td { padding: 10px; text-align: left; }
+
+        button {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover { background-color: #a29bfe; }
+        
+        hr { border: 0; border-top: 1px solid #ddd; margin: 20px 0; }
+    </style>
 </head>
 <body>
 
+<div class="main-card">
     <header>
         <h1>Selamat Datang di Portofolio Saya</h1>
         <nav>
@@ -60,15 +108,16 @@
         <h3>Hubungi Saya</h3>
         <form>
             <label for="nama">Nama:</label><br>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama.."><br><br>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama.." style="width: 100%; padding: 8px; margin-top: 5px;"><br><br>
             
             <label for="pesan">Pesan:</label><br>
-            <textarea id="pesan" name="pesan" rows="4" cols="30"></textarea><br><br>
+            <textarea id="pesan" name="pesan" rows="4" style="width: 100%; padding: 8px; margin-top: 5px;"></textarea><br><br>
             
             <button type="submit">Kirim Pesan</button>
         </form>
-        <p>© 2025 StrawberryNixy</p>
+        <p style="text-align: center; margin-top: 30px;">© 2025 StrawberryNixy</p>
     </footer>
+</div>
 
 </body>
 </html>

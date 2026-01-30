@@ -269,7 +269,7 @@
                 // 4. Construct the encoded message
                 // %0A is the code for a line break (Enter)
                 // *text* makes the text bold in WhatsApp
-                const encodedText = `Hello Rafi, I'm !%0A%0A*Sender Name:* ${name}, ${message}`;
+                const encodedText = `Hello Rafi, I'm ${name}. I come from your vercel, and i want to send you a message. ${message}`;
                 
                 // 5. Construct the final WhatsApp API URL
                 const finalUrl = `https://api.whatsapp.com/send?phone=${myNumber}&text=${encodedText}`;

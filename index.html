@@ -190,7 +190,7 @@
 
     <section id="Profile">
         <h2>Who is Rafi</h2>
-        <p>Saya adalah seorang mahasiswa sasing yang skor complete paper pinya 90! <b></b> <b> </b></p>
+        <p>Rafi is a final-year English Studies student at Universitas Indonesia, specializing in narrative storytelling and sociocultural research. Experienced in leading fast-paced operations as Head of EHS at Olimbud 2024, managing 30+ team members under tight deadlines. Highly skilled in conducting field research, interviewing, and crafting engaging digital content. Passionate about bridging academic insights with impactful media content<b></b> <b> </b></p>
         <blockquote>
             "I'm open to any challenge. So, if you have any interesting project and are interested to collaborate, contact me ASAP!"
         </blockquote>
@@ -253,28 +253,24 @@
 
         <script>
             function kirimKeWA() {
-                // 1. Pull data from your specific input IDs
+                
                 const name = document.getElementById('nama').value;
                 const message = document.getElementById('pesan').value;
                 
-                // 2. Your verified WhatsApp number
+                
                 const myNumber = "6285174162576"; 
 
-                // 3. Simple validation to prevent empty spam
+                
                 if (name.trim() === "" || message.trim() === "") {
                     alert("Please fill in both your name and message!");
                     return;
                 }
 
-                // 4. Construct the encoded message
-                // %0A is the code for a line break (Enter)
-                // *text* makes the text bold in WhatsApp
-                const encodedText = `Hello Rafi, I'm ${name}. I come from your vercel. ${message}`;
                 
-                // 5. Construct the final WhatsApp API URL
+                const encodedText = `Hello Rafi, I'm ${name}. I come from your vercel. ${message}`;
+            
                 const finalUrl = `https://api.whatsapp.com/send?phone=${myNumber}&text=${encodedText}`;
 
-                // 6. Open in a new tab so they don't leave your portfolio
                 window.open(finalUrl, '_blank');
             }
             </script>

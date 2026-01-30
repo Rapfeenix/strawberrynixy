@@ -252,3 +252,29 @@
         </form>
 
         <script>
+            function kirimKeWA() {
+                // 1. Pull data from your specific input IDs
+                const name = document.getElementById('nama').value;
+                const message = document.getElementById('pesan').value;
+                
+                // 2. Your verified WhatsApp number
+                const myNumber = "6285174162576"; 
+
+                // 3. Simple validation to prevent empty spam
+                if (name.trim() === "" || message.trim() === "") {
+                    alert("Please fill in both your name and message!");
+                    return;
+                }
+
+                // 4. Construct the encoded message
+                // %0A is the code for a line break (Enter)
+                // *text* makes the text bold in WhatsApp
+                const encodedText = `Hello Rafi, I'm !%0A%0A*Sender Name:* ${name}, ${message}`;
+                
+                // 5. Construct the final WhatsApp API URL
+                const finalUrl = `https://api.whatsapp.com/send?phone=${myNumber}&text=${encodedText}`;
+
+                // 6. Open in a new tab so they don't leave your portfolio
+                window.open(finalUrl, '_blank');
+            }
+            </script>
